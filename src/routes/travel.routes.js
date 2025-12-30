@@ -43,6 +43,14 @@ router.get('/countries', travelController.getCountries);
 router.post('/policy/create', travelController.createPolicy);
 
 /**
+ * @route   POST /uic/create-policy
+ * @desc    Generate UW document (Create Policy) - Alternative route for frontend compatibility
+ * @access  Public
+ * @body    Complete policy data including traveler info, plan details, etc.
+ */
+router.post('/create-policy', travelController.createPolicy);
+
+/**
  * @route   GET /uic/policy/requests
  * @desc    Get requested UW document data
  * @access  Public
